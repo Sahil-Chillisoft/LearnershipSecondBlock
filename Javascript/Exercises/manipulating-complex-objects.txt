@@ -1,0 +1,23 @@
+var myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+      "CS",
+      "8T",
+      "LP" ],
+    "gold": true
+  },
+  {
+    "artist": "AC/DC",
+    "title": "BACK IN BLACK",
+    "release_year": 1980,
+    "formats": [
+      "CS",
+      "8T",
+      "LP",
+    "CD",
+  ]
+  }
+];
