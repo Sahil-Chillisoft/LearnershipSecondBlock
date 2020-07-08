@@ -99,8 +99,8 @@ namespace _115392.Development.FormativeAssessment
         #region Question3
         public void Question3()
         {
-            var currentDateTime = DateTime.UtcNow;
-            Console.WriteLine(currentDateTime);
+            var currentTime = DateTime.UtcNow.ToLongTimeString();
+            Console.WriteLine(currentTime);
         }
 
         #endregion
