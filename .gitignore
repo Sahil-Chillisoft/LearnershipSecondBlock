@@ -10,3 +10,5 @@
 /Class Project/ChatApp/ChatApp/obj
 /Class Project/ChatApp/ChatApp/bin/Debug/netcoreapp3.1
 /Class Project/ChatApp/.vs/ChatApp
+/Class Project/ChatApp/ChatApp.Domain/obj/Debug/netcoreapp3.1
+/Class Project/ChatApp/ChatApp.Domain/bin/Debug/netcoreapp3.1

@@ -12,5 +12,12 @@ namespace ChatApp.Web.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Login()
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

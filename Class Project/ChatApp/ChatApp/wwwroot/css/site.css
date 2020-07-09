@@ -77,6 +77,10 @@ body {
     font-size: 30px;
 }
 
+.material-icons.md-70 {
+    font-size: 70px;
+}
+
 .mousePointer {
     cursor: pointer;
 }
@@ -197,3 +201,21 @@ body {
     background-color: rgba(0, 0, 0, 0.12);
 }
 
+/*-------------------------------------*/
+/*Custom Padding*/
+.md-Padding-Top-10 {
+    padding-top: 10px;
+}
+
+.md-Padding-Top-50 {
+    padding-top: 50px;
+}
+
+.md-Padding-Top-100 {
+    padding-top: 100px;
+}
+/*-------------------------------------*/
+
+.full-width {
+    width: 100%;
+}
