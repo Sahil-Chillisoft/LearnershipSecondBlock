@@ -157,7 +157,7 @@ body {
 }
 
 .bg-yellow {
-    background-color: #E0E40C !important;
+    background-color: #ffca33 !important;
     color: #fff;
     cursor: pointer;
 }
@@ -168,14 +168,14 @@ body {
     cursor: pointer;
 }
 
-.bg-red {
-    background-color: #E11517 !important;
+.bg-green {
+    background-color: #02b868 !important;
     color: #fff;
     cursor: pointer;
 }
 
 .bg-orange {
-    background-color: #F08716 !important;
+    background-color: #f75b12 !important;
     color: #fff;
     cursor: pointer;
 }
