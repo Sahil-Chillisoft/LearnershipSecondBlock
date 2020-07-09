@@ -1,0 +1,135 @@
+﻿@{
+    ViewData["Title"] = "ChatApp";
+}
+
+<div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-1 icon">
+        <i style="font-size: 70px" class="material-icons">vertical_split</i>
+    </div>
+    <div class="col-md-4">
+        <h1 class="display-4">Dashboard</h1>
+    </div>
+</div>
+
+<br />
+
+<div class="row">
+    <div class="col-md-4">
+        <div id="divViewUsers" title="View & Search for Users" onclick="Navigate(id)">
+            <div class="info-box bg-limegreen hover-expand-effect">
+                <div class="icon">
+                    <i class="material-icons">group</i>
+                </div>
+                <div class="content">
+                    <div style="font-size:20px">Users</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div id="divChannels" title="View & Send Messages On Channels" onclick="Navigate(id)">
+            <div class="info-box bg-blue hover-expand-effect">
+                <div class="icon">
+                    <i class="material-icons">cast</i>
+                </div>
+                <div class="content">
+                    <div style="font-size:20px">Channels</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div id="divPrivateChats" title="View & Resume Private Chats" onclick="Navigate(id)">
+            <div class="info-box bg-yellow hover-expand-effect">
+                <div class="icon">
+                    <i class="material-icons">person_add_alt_1</i>
+                </div>
+                <div class="content">
+                    <div style="font-size:20px">Private Chats</div>
+                    <div style="font-size:20px">10</div>@*Temp KPI Indicator For Illustration*@ 
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div id="divJoinedChannels" title="View Joined Channels That You Are Part Of." onclick="Navigate(id)">
+            <div class="info-box bg-purple hover-expand-effect">
+                <div class="icon">
+                    <i class="material-icons">cast_connected</i>
+                </div>
+                <div class="content">
+                    <div style="font-size:20px">Joined Channels</div>
+                    <div style="font-size:20px">15</div> @*Temp KPI Indicator For Illustration*@
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div id="divMyChannels" title="View Channels Created By Me." onclick="Navigate(id)">
+            <div class="info-box bg-orange hover-expand-effect">
+                <div class="icon">
+                    <i class="material-icons">star_border</i>
+                </div>
+                <div class="content">
+                    <div style="font-size:20px">My Channels</div>
+                    <div style="font-size:20px">5</div> @*Temp KPI Indicator For Illustration*@
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div id="divCreateChannel" title="Create A New Channel" onclick="Navigate(id)">
+            <div class="info-box bg-red hover-expand-effect">
+                <div class="icon">
+                    <i class="material-icons">add_circle_outline</i>
+                </div>
+                <div class="content">
+                    <div style="font-size:20px">Create New Channel</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+
+        function Navigate(id) {
+            switch (id) {
+                case 'divViewUsers':
+                    window.location.href = '';
+                    break;
+                case 'divChannels':
+                    window.location.href = '';
+                    break;
+                case 'divPrivateChats':
+                    window.location.href = '';
+                    break;
+                case 'divJoinedChannels':
+                    window.location.href = '';
+                    break;
+                case 'divMyChannels':
+                    window.location.href = '';
+                    break;
+                case 'divCreateChannel':
+                    window.location.href = '';
+                    break;
+            }
+        }
+    </script>
+}
