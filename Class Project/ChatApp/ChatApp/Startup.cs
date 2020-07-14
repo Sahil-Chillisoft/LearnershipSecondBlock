@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ChatApp.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace ChatApp.Web
 {
@@ -26,6 +28,7 @@ namespace ChatApp.Web
             services.AddMvc();
             services.AddControllersWithViews();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            services.AddDbContext<ChatAppDatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ChatAppDbConnectionString")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

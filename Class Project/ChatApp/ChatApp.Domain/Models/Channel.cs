@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ChatApp.Domain.Models
 {
-    public class Channels
+    public class Channel
     {
         public int Id { get; set; }
         public string Name { get; set; }

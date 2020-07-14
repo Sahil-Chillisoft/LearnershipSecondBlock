@@ -81,6 +81,10 @@ body {
     font-size: 70px;
 }
 
+.material-icons-font {
+    font-size : 20px; 
+}
+
 .mousePointer {
     cursor: pointer;
 }

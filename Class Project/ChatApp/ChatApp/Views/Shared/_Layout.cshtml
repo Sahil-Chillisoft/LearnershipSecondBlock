@@ -8,23 +8,22 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    <link href="~/css/simple-sidebar.css" rel="stylesheet" /> @*sidebar css*@
+    <link href="~/css/simple-sidebar.css" rel="stylesheet" /> 
 </head>
 <body>
-    <div class="d-flex" id="wrapper">
-        @*<div class="bg-light border-right" id="sidebar-wrapper">
+<div class="d-flex" id="wrapper">
+    @*TODO: Only Show SideBar once user has successfully logged in.*@
+    @*<div class="bg-light border-right" id="sidebar-wrapper">
             <div class="sidebar-heading">Start Bootstrap </div>
             <div class="list-group list-group-flush">
                 <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-                <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
-                <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
-                <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
-                <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
-                <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Private Chats</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Joined Channels</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Logout</a>
             </div>
         </div>*@
 
-        @*<header>
+    @*<header>
             <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
                     <div class="row">
                         <div class="col-md-12">
@@ -33,19 +32,19 @@
                     </div>
                 </nav>
         </header>*@
-        
-        <div class="container">
-            <main role="main" class="pb-3">
-                @RenderBody()
-            </main>
-        </div>
 
-        <script src="~/lib/jquery/dist/jquery.min.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-        @RenderSection("Scripts", required: false)
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
     </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    @RenderSection("Scripts", required: false)
+</div>
 </body>
 </html>
