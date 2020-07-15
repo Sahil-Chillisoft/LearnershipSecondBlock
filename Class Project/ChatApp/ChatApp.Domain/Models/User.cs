@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace ChatApp.Domain.Models
 {
+    [Table("Users")]
     public class User
     {
         public int Id { get; set; }
@@ -12,6 +14,24 @@ namespace ChatApp.Domain.Models
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public DateTime DateLastLoggedIn { get; set; }
+        public DateTime? DateLastLoggedIn { get; set; }
+    }
+
+    public class UserManager
+    {
+        public UserManager()
+        {
+        }
+
+        public UserManager(int userId, string email, bool isAuthenticated)
+        {
+            UserId = userId;
+            Email = email;
+            IsAuthenticated = isAuthenticated;
+        }
+
+        public static int UserId { get; set; }
+        public static string Email { get; set; }
+        public static bool IsAuthenticated { get; set; }
     }
 }

@@ -11,10 +11,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ChatApp.Data\ChatApp.Data.csproj" />
+    <ProjectReference Include="..\ChatApp.Domain\ChatApp.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Api\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
 
 </Project>

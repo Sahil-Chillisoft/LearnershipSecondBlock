@@ -1,15 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using ChatApp.Data;
 using Microsoft.EntityFrameworkCore;
+using ChatApp.Data;
+using ChatApp.Domain;
 
 namespace ChatApp.Web
 {
@@ -29,6 +25,7 @@ namespace ChatApp.Web
             services.AddControllersWithViews();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddDbContext<ChatAppDatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ChatAppDbConnectionString")));
+            services.AddTransient<IUserAuthentication, UserAuthentication>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

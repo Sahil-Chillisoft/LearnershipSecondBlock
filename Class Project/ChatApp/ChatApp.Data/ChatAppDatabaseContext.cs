@@ -10,6 +10,14 @@ namespace ChatApp.Data
         {
         }
 
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<ChannelMembers>().HasKey(table => new
+            {
+                table.ChannelId, table.UserId
+            });
+        }
+
         public DbSet<User> User { get; set; }
         public DbSet<Channel> Channel { get; set; }
         public DbSet<Messages> Messages { get; set; }

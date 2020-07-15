@@ -8,7 +8,7 @@ create table [Users]
 	Id int not null primary key identity(1,1),
     FirstName varchar(100) not null, 
 	LastName varchar(100) not null, 
-	Email varchar(100) not null, 
+	Email varchar(100) not null unique, 
 	[Password] varchar(100) not null, 
 	DateLastLoggedIn DateTime null
 )
