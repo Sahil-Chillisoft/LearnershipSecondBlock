@@ -10,5 +10,7 @@ namespace ChatApp.Domain
         IEnumerable<User> GetAllUsers();
 
         IEnumerable<User> GetUsersBySearchParameter(string search);
+
+        IEnumerable<User> GetUsersForAutocomplete(string search);
     }
 }

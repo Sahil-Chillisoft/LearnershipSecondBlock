@@ -29,5 +29,19 @@ namespace ChatApp.Web.Api
 
             return new JsonResult(new {data = userList});
         }
+
+        [HttpGet("GetUsersBySearch")]
+        public ActionResult GetUsersBySearch(string search)
+        {
+            return Ok("GetUsersBySearch Returned");
+        }
+
+        [HttpGet("GetUsersForAutocomplete")]
+        public ActionResult GetUsersForAutocomplete([FromQuery] string searchParameter)
+        {
+            var userList = _usersRepository.GetUsersForAutocomplete(searchParameter);
+            return new JsonResult(userList);
+        }
+
     }
 }

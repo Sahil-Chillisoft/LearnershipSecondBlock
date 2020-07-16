@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using ChatApp.Domain;
 using ChatApp.Domain.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace ChatApp.Data
 {
@@ -25,6 +24,12 @@ namespace ChatApp.Data
         public IEnumerable<User> GetUsersBySearchParameter(string search)
         {
             throw new NotImplementedException();
+        }
+
+        public IEnumerable<User> GetUsersForAutocomplete(string search)
+        {
+            var userList = _context.User.Where(x => x.Email.Contains(search));
+            return userList.Take(10);
         }
     }
 }
