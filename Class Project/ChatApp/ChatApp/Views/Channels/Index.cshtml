@@ -1,0 +1,41 @@
+﻿<div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-1 icon">
+        <i class="material-icons md-70">group</i>
+    </div>
+    <div class="col-md-4">
+        <h1 class="display-4">Channel List</h1>
+    </div>
+</div>
+<hr />
+
+<div id="divSearch">
+    <div class="row">
+        <div class="col-md-4">
+            <input Id="search" name="search" class="form-control" type="text" placeholder="Start typing to search by channel name..." />
+        </div>
+        <div class="col-md-2">
+            <input type="submit" name="SearchButton" value="Search" class="btn btn-block btn-info" />
+        </div>
+    </div>
+</div>
+<br />
+
+<div class="row">
+    <div class="col-md-12">
+        <table id="channelsTable" class="table table-bordered table-striped" width="100%">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Date Created</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+@section scripts{ 
+    <script src="~/js/channels.js"></script>
+}

@@ -1,0 +1,42 @@
+﻿
+<div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-1 icon">
+        <i class="material-icons md-70">group</i>
+    </div>
+    <div class="col-md-4">
+        <h1 class="display-4">User List</h1>
+    </div>
+</div>
+<hr />
+
+<div id="divSearch">
+    <div class="row">
+        <div class="col-md-4">
+            <input Id="search" name="search" class="form-control" type="text" placeholder="Start typing to search by user email" />
+        </div>
+        <div class="col-md-2">
+            <input type="submit" name="SearchButton" value="Search" class="btn btn-block btn-info" />
+        </div>
+    </div>
+</div>
+<br />
+
+<div class="row">
+    <div class="col-md-12">
+        <table id="usersTable" class="table table-bordered table-striped" width="100%">
+            <thead>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Email</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+@section scripts{ 
+    <script src="~/js/users.js"></script>
+}

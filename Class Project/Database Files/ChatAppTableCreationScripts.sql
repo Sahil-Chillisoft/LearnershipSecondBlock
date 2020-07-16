@@ -17,7 +17,7 @@ create table Channels
 (
 	Id int not null primary key identity(1,1), 
 	[Name] varchar(100) not null, 
-	Desceiption varchar(100) not null,
+	Description varchar(100) not null,
 	DateCreated Date not null default cast(getdate() as date), 
 	UserIdCreatedBy int not null foreign key references [Users](Id)
 )
