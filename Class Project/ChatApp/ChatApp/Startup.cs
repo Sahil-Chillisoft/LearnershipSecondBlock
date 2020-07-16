@@ -26,6 +26,8 @@ namespace ChatApp.Web
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddDbContext<ChatAppDatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ChatAppDbConnectionString")));
             services.AddTransient<IUserAuthentication, UserAuthentication>();
+            services.AddTransient<IUsersRepository, UsersRepository>();
+            services.AddTransient<IChannelsRepository, ChannelsRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
