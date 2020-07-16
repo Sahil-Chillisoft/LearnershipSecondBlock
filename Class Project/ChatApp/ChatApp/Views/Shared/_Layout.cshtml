@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using ChatApp.Domain.Models;
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -8,45 +9,41 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    <link href="~/css/simple-sidebar.css" rel="stylesheet" /> 
+    <link href="~/css/simple-sidebar.css" rel="stylesheet" />
     <link href="~/css/jquery.dataTables.css" rel="stylesheet" />
 </head>
 <body>
-<div class="d-flex" id="wrapper">
-    @*TODO: Only Show SideBar once user has successfully logged in.*@
-    @*<div class="bg-light border-right" id="sidebar-wrapper">
-            <div class="sidebar-heading">Start Bootstrap </div>
-            <div class="list-group list-group-flush">
-                <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-                <a href="#" class="list-group-item list-group-item-action bg-light">Private Chats</a>
-                <a href="#" class="list-group-item list-group-item-action bg-light">Joined Channels</a>
-                <a href="#" class="list-group-item list-group-item-action bg-light">Logout</a>
+    <div class="d-flex" id="wrapper">
+
+        @if (UserManager.IsAuthenticated)
+                {
+            //TODO: Add in navigation.
+            <div class="bg-light border-right" id="sidebar-wrapper">
+                <div class="sidebar-heading">Blah Blah Chat App</div>
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action bg-light"><i class="material-icons">vertical_split</i> Dashboard</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-light"><i class="material-icons">https</i> Private Chats</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-light"><i class="material-icons">cast_connected</i> Joined Channels</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-light"><i class="material-icons">close</i> Logout</a>
+                </div>
             </div>
-        </div>*@
+        }
 
-    @*<header>
-            <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <a class="navbar-brand">Chat App <i class="material-icons">textsms</i></a>
-                        </div>
-                    </div>
-                </nav>
-        </header>*@
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
 
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="~/js/jquery.dataTables.js"></script>
+        @RenderSection("Scripts", required: false)
     </div>
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <script src="~/js/jquery.dataTables.js"></script>
-    @RenderSection("Scripts", required: false)
-</div>
 </body>
 </html>
+
+
