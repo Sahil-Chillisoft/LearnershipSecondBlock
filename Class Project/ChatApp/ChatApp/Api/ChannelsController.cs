@@ -12,22 +12,29 @@ namespace ChatApp.Web.Api
     [ApiController]
     public class ChannelsController : ControllerBase
     {
-        private readonly IChannelsRepository _repository;
+        private readonly IChannelsRepository _channelRepository;
 
-        public ChannelsController(IChannelsRepository repository)
+        public ChannelsController(IChannelsRepository channelRepository)
         {
-            _repository = repository;
+            _channelRepository = channelRepository;
         }
 
         [HttpGet]
         public ActionResult GetAllChannels()
         {
-            var channelList = _repository.GetAllChannels();
+            var channelList = _channelRepository.GetAllChannels();
 
             if (channelList == null)
                 return NotFound();
 
             return new JsonResult(new { data = channelList });
+        }
+
+        [HttpGet("GetChannelsForAutocomplete")]
+        public ActionResult GetChannelsForAutocomplete([FromQuery] string searchParameter)
+        {
+            var channelList = _channelRepository.GetChannelsForAutocomplete(searchParameter);
+            return new JsonResult(channelList);
         }
     }
 }

@@ -25,5 +25,11 @@ namespace ChatApp.Data
         {
             throw new NotImplementedException();
         }
+
+        public IEnumerable<Channel> GetChannelsForAutocomplete(string searchParameter)
+        {
+            var channelList = _context.Channel.Where(x => x.Name.Contains(searchParameter));
+            return channelList.Take(10);
+        }
     }
 }

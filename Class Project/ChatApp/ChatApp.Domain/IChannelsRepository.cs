@@ -9,5 +9,7 @@ namespace ChatApp.Domain
         IEnumerable<Channel> GetAllChannels();
 
         IEnumerable<Channel> GetChannelsBySearchParameter(string searchParameter);
+
+        IEnumerable<Channel> GetChannelsForAutocomplete(string searchParameter);
     }
 }
